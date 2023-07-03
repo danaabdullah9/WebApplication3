@@ -1,0 +1,38 @@
+﻿@model IEnumerable<details>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach(var item in Model)
+{
+   <div class="container">
+  <section class="mx-auto my-5" style="max-width: 23rem;">
+
+    <div class="card booking-card v-2 mt-2 mb-4 rounded-bottom">
+             <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+  <img class="img-fluid" src=@item.image >
+  <div class="card-block">
+            <h4 class="card-title"> <strong>   more details    </strong>   </h4>
+                 <ul class="list-unstyled list-inline mb-2">
+              <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+          <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-half-alt fa-xs"></i></li>
+                        </ul>
+            <p class="card-text"> <strong>description : </strong>@item.description              </p>
+            <p class="card-text"> <strong>About Thearpist : </strong>@item.aboutThearpist</p>
+             <a href="/Home/invoic/@item.id" class="btn btn-outline-primary btn-sm mt-2">book now</a>
+          
+                     
+  </div>
+</div>
+ </div>
+  </section>
+    </div>
+   
+        
+}
